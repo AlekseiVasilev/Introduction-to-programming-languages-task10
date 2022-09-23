@@ -6,9 +6,12 @@
 782 -> 8
 918 -> 1
 */
+// int columns = Math.Abs(int.Parse(Console.ReadLine() ?? string.Empty)); - алгоритм избавления от ошибки null
+// int num = int.Parse(Console.ReadLine());
 
 Console.Write("Введите трехзначное число ");
-int num = int.Parse(Console.ReadLine());
+int num = Math.Abs(int.Parse(Console.ReadLine() ?? string.Empty)); // int columns = Math.Abs(int.Parse(Console.ReadLine() ?? string.Empty)); - алгоритм избавления от ошибки null
+// int num = int.Parse(Console.ReadLine());
 
 int digit_capacity = num.ToString().Length;
 
@@ -18,4 +21,3 @@ else
     {int num1 = num/10;
      int num2 = num1 % 10;
         Console.Write($"{num2}");}
-
